@@ -3,14 +3,17 @@ from PyQt5.QtWidgets import (QApplication, QMainWindow, QVBoxLayout, QHBoxLayout
                              QLabel, QComboBox, QTextEdit, QLineEdit, QPushButton, QWidget)
 from azure_healthcare_bot import AzureBotThread
 from translation import TranslatorModule
+from UI_element import StyledButton, StyledLabel, ValidatedInput, apply_animation
 
 class HealthcareChatbot(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        # UI Setup
+        
+# UI Setup
         self.setWindowTitle("Azure Healthcare Chatbot")
         self.setGeometry(100, 100, 600, 500)
+        self.setStyleSheet("background-color: #f4f4f4;")
 
         # Central widget and layout
         central_widget = QWidget()
@@ -20,8 +23,8 @@ class HealthcareChatbot(QMainWindow):
 
         # Language Selection
         lang_layout = QHBoxLayout()
-        lang_label = QLabel("Select Language:")
-        self.language_combo = QComboBox()
+        lang_label = StyledLabel("Select Language:")
+        self.language_combo = QComboBox()  # Keep QComboBox
         self.language_combo.addItems([
             "English", "Telugu (తెలుగు)", "Hindi (हिन्दी)", "Tamil (தமிழ்)"
         ])
@@ -32,20 +35,28 @@ class HealthcareChatbot(QMainWindow):
         # Chat Display
         self.chat_display = QTextEdit()
         self.chat_display.setReadOnly(True)
+        self.chat_display.setStyleSheet("""
+            QTextEdit {
+                background-color: white;
+                border: 2px solid #bdc3c7;
+                border-radius: 10px;
+                padding: 10px;
+            }
+        """)
         main_layout.addWidget(self.chat_display)
 
         # Message Input
         input_layout = QHBoxLayout()
-        self.message_input = QLineEdit()
-        self.message_input.setPlaceholderText("Enter your symptoms in...")
-        self.send_button = QPushButton("Send")
-        self.send_button.clicked.connect(self.send_message)  # Connect the button's clicked signal to send_message
+        self.message_input = ValidatedInput()
+        self.message_input.setPlaceholderText("Enter your symptoms...")
+        self.send_button = StyledButton("Send")
+        self.send_button.clicked.connect(self.send_message)
         input_layout.addWidget(self.message_input)
         input_layout.addWidget(self.send_button)
         main_layout.addLayout(input_layout)
 
         # Disclaimer
-        disclaimer = QLabel("Disclaimer: This is preliminary advice. Always consult a healthcare professional.")
+        disclaimer = StyledLabel("Disclaimer: Preliminary advice. Consult a healthcare professional.")
         main_layout.addWidget(disclaimer)
 
         # Translator setup
@@ -55,6 +66,11 @@ class HealthcareChatbot(QMainWindow):
         self.bot_thread = AzureBotThread()
         self.bot_thread.message_received.connect(self.display_bot_message)
         self.bot_thread.start()
+
+        # Add animations
+        apply_animation(self.message_input)
+        apply_animation(self.send_button)
+        
     
 
     def send_message(self):
