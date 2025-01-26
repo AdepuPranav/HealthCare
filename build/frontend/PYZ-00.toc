@@ -2,6 +2,7 @@
  [('PyQt5',
    'C:\\Users\\Pranav\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyQt5\\__init__.py',
    'PYMODULE'),
+  ('UI_element', 'D:\\healthcare\\UI_element.py', 'PYMODULE'),
   ('__future__',
    'C:\\Users\\Pranav\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\__future__.py',
    'PYMODULE'),
