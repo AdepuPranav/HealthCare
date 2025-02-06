@@ -23,7 +23,7 @@ Project Structure 📂
 Setup Instructions 🛠
 1. Clone the Repository :
 
-git clone https://github.com/AdepuPranav/AIHACKINTELLIGENCE
+git clone https://github.com/AdepuPranav/Azure-Health-Care-Bot
 
 cd azure-healthcare-chatbot
 
