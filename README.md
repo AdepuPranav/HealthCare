@@ -22,22 +22,31 @@ Project Structure 📂
 
 Setup Instructions 🛠
 1. Clone the Repository :
-git clone https://github.com/your-username/azure-healthcare-chatbot.git
+
+git clone https://github.com/AdepuPranav/AIHACKINTELLIGENCE
+
 cd azure-healthcare-chatbot
 
 2. Install Dependencies :
-   pip install -r requirements.txt
+ pip install -r requirements.txt
    
-3. Configure API Keys :
-  Open config.py
-  Add your Azure Healthcare Bot Direct Line Secret and Endpoint
+4. Configure API Keys :
 
-4. Run the Application:
-  python main.py
+   Open config.py
+
+   Add your Azure Healthcare Bot Direct Line Secret and Endpoint
+
+6. Run the Application:
+   python main.py
 
 How It Works 🤖💬 :
-  Start the chatbot
-  Select a language (English, Telugu, Hindi, or Tamil)
-  Type your symptoms in the input field and press "Send"
-  The bot processes your query and responds with relevant healthcare information
-  If a language other than English is selected, the response will be automatically translated
+  
+1.Start the chatbot
+
+2.Select a language (English, Telugu, Hindi, or Tamil)
+  
+3.Type your symptoms in the input field and press "Send"
+  
+4.The bot processes your query and responds with relevant healthcare information
+  
+5.If a language other than English is selected, the response will be automatically translated
