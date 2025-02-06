@@ -1,4 +1,5 @@
 Azure Healthcare Chatbot 🏥🤖
+
 An AI-powered Healthcare Chatbot built using Python (PyQt5) and Microsoft Azure Healthcare Bot. This chatbot allows users to describe their symptoms and receive preliminary medical advice. It also supports multilingual translations, enabling users to communicate in English, Telugu, Hindi, and Tamil.
 
 Features 🚀
