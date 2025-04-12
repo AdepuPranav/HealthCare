@@ -1,0 +1,8 @@
+.env
+config.py
+.mp4
+Hackathon_PPT.pptx
+#flutter
+flutter_ui/.dart_tool/
+flutter_ui/build/
+flutter_ui/.idea/
