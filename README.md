@@ -18,12 +18,27 @@ An AI-powered **Healthcare Chatbot** using **Flutter** for the Android frontend 
 ---
 
 ## 📂 Project Structure
-📁 azure_healthcare_flutter_app │── 📁 lib │ ├── 📜 main.dart # App entry point │ ├── 📜 chat_screen.dart # Chat UI and messaging logic │ ├── 📜 log_service.dart # Save/read/clear chat logs │ ├── 📜 language_selector.dart # Language slider/dropdown UI │ ├── 📜 health_tips_screen.dart # Expandable categorized health tips │ └── 📜 api_service.dart # Communicates with Azure backend │ │── 📁 assets # Icons and translation strings │── 📁 android # Android-specific code │── 📜 pubspec.yaml # Flutter dependencies
+azure_healthcare_flutter_app/
+├── lib/
+│   ├── main.dart               # App entry point
+│   ├── chat_screen.dart        # Chat UI and messaging logic
+│   ├── log_service.dart        # Save/read/clear chat logs
+│   ├── language_selector.dart  # Language slider/dropdown UI
+│   ├── health_tips_screen.dart # Expandable categorized health tips
+│   └── api_service.dart        # Communicates with Azure backend
+│
+├── assets/                     # Icons and translation strings
+│
+├── android/                    # Android-specific code
+│
+└── pubspec.yaml                # Flutter dependencies
+
+
 
 2. Open in Android Studio
 Launch Android Studio
-
 Click "Open" and select the cloned folder (flutter_android_app)
+
 
 3. Install Dependencies
 Open pubspec.yaml
