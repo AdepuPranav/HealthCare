@@ -1,52 +1,50 @@
-Azure Healthcare Chatbot 🏥🤖
+# Azure Healthcare Chatbot 🏥🤖
 
-An AI-powered Healthcare Chatbot built using Python (PyQt5) and Microsoft Azure Healthcare Bot. This chatbot allows users to describe their symptoms and receive preliminary medical advice. It also supports multilingual translations, enabling users to communicate in English, Telugu, Hindi, and Tamil.
+An AI-powered **Healthcare Chatbot** using **Flutter** for the Android frontend and **Microsoft Azure Healthcare Bot** as the backend. This app enables users to describe their symptoms and receive preliminary medical advice, with support for real-time translation in **English, Telugu, Hindi, and Tamil**.
 
-Features 🚀
-✅ Conversational AI – Powered by Microsoft Azure's Healthcare Bot
-✅ Multilingual Support – Users can interact in multiple languages
-✅ Interactive UI – Developed using PyQt5 for a responsive and user-friendly experience
-✅ Real-time Translation – Automatically translates user input and bot responses
-✅ Button Animation – Minimalistic UI animations for better user experience
-✅ Healthcare Disclaimer – Users are advised to consult professionals for final medical advice
+---
 
-Project Structure 📂
-📁 Healthcare_Chatbot  
-│── 📜 main.py                 # Entry point of the application  
-│── 📜 azure_healthcare_bot.py  # Handles communication with Azure Healthcare Bot  
-│── 📜 UI_components.py         # Custom UI elements (buttons, labels, etc.)  
-│── 📜 translation.py           # Handles language translation  
-│── 📜 config.py                # Stores API keys and endpoints  
-│── 📜 requirements.txt         # Dependencies for the project  
-└── 📁 assets                   # Icons and other UI resources  
+## ✨ Features
 
-Setup Instructions 🛠
-1. Clone the Repository :
+- ✅ **Conversational AI** – Integrated with Microsoft Azure Healthcare Bot  
+- ✅ **Multilingual Support** – Chat in English, Telugu, Hindi, or Tamil  
+- ✅ **Real-time Translation** – Automatic translation of user inputs and bot replies  
+- ✅ **Flutter Android App** – Clean, responsive UI with animated chat interface  
+- ✅ **Persistent Chat History** – Messages are saved locally using SharedPreferences  
+- ✅ **Typing Indicators & Avatar Styling** – Improved conversational experience  
+- ✅ **Language Slider & Dropdown UI** – Easy language selection  
+- ✅ **Healthcare Disclaimer** – Encourages users to seek professional medical advice  
 
-git clone https://github.com/AdepuPranav/Azure-Health-Care-Bot
+---
 
-cd azure-healthcare-chatbot
+## 📂 Project Structure
+📁 azure_healthcare_flutter_app │── 📁 lib │ ├── 📜 main.dart # App entry point │ ├── 📜 chat_screen.dart # Chat UI and messaging logic │ ├── 📜 log_service.dart # Save/read/clear chat logs │ ├── 📜 language_selector.dart # Language slider/dropdown UI │ ├── 📜 health_tips_screen.dart # Expandable categorized health tips │ └── 📜 api_service.dart # Communicates with Azure backend │ │── 📁 assets # Icons and translation strings │── 📁 android # Android-specific code │── 📜 pubspec.yaml # Flutter dependencies
 
-2. Install Dependencies :
- pip install -r requirements.txt
-   
-4. Configure API Keys :
+2. Open in Android Studio
+Launch Android Studio
 
-   Open config.py
+Click "Open" and select the cloned folder (flutter_android_app)
 
-   Add your Azure Healthcare Bot Direct Line Secret and Endpoint
+3. Install Dependencies
+Open pubspec.yaml
+Click "Pub get" to install required packages
 
-6. Run the Application:
-   python main.py
+4. Configure Backend
+Ensure your backend (FastAPI + Azure Bot) is deployed and publicly accessible. Update the api_service.dart with your backend endpoint and Direct Line secret if needed.
 
-How It Works 🤖💬 :
-  
-1.Start the chatbot
+5. Run the App
+IMPORTANT :
+RUN the main.py (it will run a local server to use the backend python files) and then run the frontend app in android studio(flutter_android_app).
+Connect your Android device or launch an emulator
 
-2.Select a language (English, Telugu, Hindi, or Tamil)
-  
-3.Type your symptoms in the input field and press "Send"
-  
-4.The bot processes your query and responds with relevant healthcare information
-  
-5.If a language other than English is selected, the response will be automatically translated
+Click Run ▶️ to start the app
+
+💬 How It Works
+1.Open the app and select your preferred language.
+2.Enter your symptoms and press Send.
+3.The app sends the message to the backend, which communicates with Azure Healthcare Bot.
+4.Responses are returned, translated (if needed), and displayed in the chat.
+5.Health tips are available in the sidebar and support translation as well.
+
+📌 Disclaimer
+This chatbot is for informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider.
